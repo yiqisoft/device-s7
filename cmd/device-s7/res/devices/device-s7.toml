@@ -1,0 +1,15 @@
+[[DeviceList]]
+  Name = "S7-Device01"
+  ProfileName = "S7-Device1"
+  Description = "Example of S7 Device"
+  Labels = [ "industrial" ]
+  [DeviceList.Protocols]
+    [DeviceList.Protocols.s7]
+      Host = "192.168.0.1"
+      Port = "102"
+      Rack = "0"
+      Slot = "1"
+  [[DeviceList.AutoEvents]]
+    Interval = "300ms"
+    OnChange = false
+    SourceName = "AllResource"

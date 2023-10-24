@@ -1,0 +1,83 @@
+name: S7-Device
+manufacturer: YIQISOFT
+description: Example of S7 Device
+model: Siemens S7
+labels: [ISO-on-TCP]
+deviceResources:
+  - description: PLC bool
+    name: bool
+    isHidden: false
+    properties:
+      valueType: Bool
+      readWrite: RW
+    attributes:
+      NodeName: DB4.DBX0.0
+  - description: PLC byte
+    name: byte
+    isHidden: false
+    properties:
+      valueType: Uint8
+      readWrite: RW
+    attributes:
+      NodeName: DB4.DBB1
+  - description: PLC word
+    name: word
+    isHidden: false
+    properties:
+      valueType: Int16
+      readWrite: RW
+    attributes:
+      NodeName: DB4.DBW2
+  - description: PLC dword
+    name: dword
+    isHidden: false
+    properties:
+      valueType: Int32
+      readWrite: RW
+    attributes:
+      NodeName: DB4.DBD4
+  - description: PLC int
+    name: int
+    isHidden: false
+    properties:
+      valueType: Int16
+      readWrite: RW
+    attributes:
+      NodeName: DB4.DBW8
+  - description: PLC dint
+    name: dint
+    isHidden: false
+    properties:
+      valueType: Int32
+      readWrite: RW
+    attributes:
+      NodeName: DB4.DBW10
+  - description: PLC real
+    name: real
+    isHidden: false
+    properties:
+      valueType: Float32
+      readWrite: RW
+    attributes:
+      NodeName: DB4.DBD14
+  - description: PLC heartbeat
+    name: heartbeat
+    isHidden: false
+    properties:
+      valueType: Int16
+      readWrite: RW
+    attributes:
+      NodeName: DB1.DBW160
+deviceCommands:
+  - name: AllResource
+    isHidden: false
+    readWrite: RW
+    resourceOperations:
+      - deviceResource: bool
+      - deviceResource: byte
+      - deviceResource: word
+      - deviceResource: dword
+      - deviceResource: int
+      - deviceResource: dint
+      - deviceResource: real
+      - deviceResource: heartbeat
